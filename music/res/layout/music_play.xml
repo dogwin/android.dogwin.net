@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:background="@drawable/window_bkg1">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="90sp" android:id="@+id/mPlayerLayout"
+		android:layout_alignParentTop="true" android:layout_alignParentLeft="true">
+		<FrameLayout android:layout_width="90sp" android:id="@+id/album_frameLayout"
+			android:layout_alignParentBottom="true" android:layout_height="90sp">
+			<ImageView android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:background="@drawable/album"
+				android:layout_margin="10sp" android:id="@+id/album_imageView"
+				android:layout_gravity="center"></ImageView>
+		</FrameLayout>
+		<LinearLayout android:layout_width="match_parent"
+			android:id="@+id/mPlayerlinearLayout" android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/album_frameLayout"
+			android:orientation="vertical">
+			<TextView android:layout_width="fill_parent"
+				android:layout_marginTop="10dip" android:layout_marginLeft="10sp"
+				android:layout_marginRight="20sp" android:text="Yc音乐，音乐你的移动生活！"
+				android:layout_height="wrap_content" android:id="@+id/mText"
+				android:singleLine="true" android:marqueeRepeatLimit="marquee_forever"
+				android:focusable="true" android:focusableInTouchMode="true"
+				android:ellipsize="marquee"></TextView>
+
+			<LinearLayout android:id="@+id/linearLayout2"
+				android:layout_height="26sp" android:layout_width="fill_parent"
+				android:orientation="horizontal">
+				<SeekBar android:layout_height="25dp" android:layout_width="match_parent"
+					android:layout_marginLeft="10dip" android:thumb="@drawable/progress_dot"
+					android:progressDrawable="@drawable/seekbar_style"
+					android:background="@drawable/progressbar_outline" android:id="@+id/mseekBar"
+					android:layout_weight="3" android:layout_gravity="center"></SeekBar>
+				<TextView android:text="00:00" android:id="@+id/play_time"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginLeft="5dip" android:layout_marginRight="10sp"
+					android:layout_gravity="center_vertical|right" android:gravity="right"></TextView>
+			</LinearLayout>
+			<LinearLayout android:id="@+id/linearLayout3"
+				android:layout_width="match_parent" android:layout_height="match_parent"
+				android:layout_marginLeft="10sp">
+				<ImageButton android:id="@+id/pre_button" android:src="@drawable/pre_button_xml"
+					android:background="#008d8d8d" android:layout_gravity="center"
+					android:padding="5px" android:layout_width="wrap_content"
+					android:layout_height="wrap_content"></ImageButton>
+				<ImageButton android:id="@+id/play_button" android:src="@drawable/play_button_xml"
+					android:background="#008d8d8d" android:layout_gravity="center"
+					android:padding="5px" android:layout_width="wrap_content"
+					android:layout_height="wrap_content"></ImageButton>
+				<ImageButton android:id="@+id/next_button" android:src="@drawable/next_button_xml"
+					android:background="#008d8d8d" android:layout_gravity="center"
+					android:padding="5px" android:layout_width="wrap_content"
+					android:layout_height="wrap_content"></ImageButton>
+				<ImageButton android:src="@drawable/volumeicon_normal"
+					android:id="@+id/volumeicon_button" android:background="#008d8d8d"
+					android:layout_gravity="center" android:padding="5px"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+			</LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
+	<RelativeLayout android:layout_below="@+id/mPlayerLayout"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:id="@+id/listLayout">
+		<TabHost android:id="@android:id/tabhost"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_alignParentLeft="true">
+			<LinearLayout android:layout_width="match_parent"
+				android:id="@+id/linearLayout1" android:layout_height="match_parent"
+				android:orientation="vertical">
+				<TabWidget android:layout_width="match_parent"
+					android:layout_height="25sp" android:id="@android:id/tabs"></TabWidget>
+				<FrameLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:id="@android:id/tabcontent">
+					<LinearLayout android:layout_width="match_parent"
+						android:layout_height="match_parent" android:id="@+id/musicTab">
+						<ListView android:layout_alignParentLeft="true"
+							android:layout_width="match_parent" android:layout_height="match_parent"
+							android:id="@+id/mlistView"></ListView>
+					</LinearLayout>
+					<LinearLayout android:layout_width="match_parent"
+						android:layout_height="match_parent" android:id="@+id/lrcTab">
+						<wei.ye.mplayer.YcMusicLrcView
+							android:id="@+id/mLrcView" android:layout_width="fill_parent"
+							android:layout_height="fill_parent" android:textSize="15sp">
+						</wei.ye.mplayer.YcMusicLrcView>
+					</LinearLayout>
+					<LinearLayout android:layout_width="match_parent"
+						android:layout_height="match_parent" android:id="@+id/elseListen">
+						<Gallery android:layout_marginTop="50sp"
+							android:layout_width="fill_parent" android:id="@+id/mGallery"
+							android:layout_height="fill_parent" android:spacing="-30dp"></Gallery>
+					</LinearLayout>
+				</FrameLayout>
+			</LinearLayout>
+		</TabHost>
+
+	</RelativeLayout>
+
+</RelativeLayout>

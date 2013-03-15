@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, YcMusicPlayerActivity!</string>
+	<string name="app_name">Yc音乐</string>
+	<string name="about">Yc音乐1.7\n（For Android 2.3.3
+		以上版本）\n您在使用过程中有任何疑问，\n请与我联系，\n我期待你的关注！\n作者：叶超\nQQ:755909659\n电子邮件：755909659@qq.com
+	</string>
+</resources>
