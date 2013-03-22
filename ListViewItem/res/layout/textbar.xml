@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+   <ScrollView
+   android:id="@+id/scrollview"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  <TextView
+  android:textSize="@dimen/size20dp"
+  android:textColor="@color/black"
+  android:id="@+id/booktext"
+   android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+  </ScrollView>
+  <Button
+  android:id="@+id/middlebtn"
+  android:background="@color/alp0"
+  android:layout_centerInParent="true"
+  android:layout_height="@dimen/size60dp"
+  android:layout_width="@dimen/size40dp"
+  />
+</RelativeLayout>

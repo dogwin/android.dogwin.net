@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ranks>
+    <rankNum id="1">
+        <name>红楼梦</name>
+        <author>曹雪芹</author>
+        <clickNum>10</clickNum>
+        <downNum>8</downNum>
+        <imgurl>http://10.0.2.2:8080/downloadfile/img/hongloumeng.png</imgurl>
+        <downLoadUrl>http://10.0.2.2:8080/downloadfile/txt/hongloumeng.txt</downLoadUrl>
+        <readOnlineUrl>http://10.0.2.2:8080/downloadfile/bookrank/bookxml/hongloumeng.xml</readOnlineUrl>
+     </rankNum>
+     <rankNum id="2">
+        <name>西游记</name>
+        <author>吴承恩</author>
+        <clickNum>9</clickNum>
+        <downNum>6</downNum>
+        <imgurl>http://10.0.2.2:8080/downloadfile/img/xiyouji.png</imgurl>
+        <downLoadUrl>http://10.0.2.2:8080/downloadfile/txt/xiyouji.txt</downLoadUrl>
+        <readOnlineUrl>http://10.0.2.2:8080/downloadfile/bookrank/bookxml/xiyouji.xml</readOnlineUrl>
+     </rankNum>
+     <rankNum id="3">
+        <name>水浒传</name>
+        <author>施耐庵</author>
+        <clickNum>7</clickNum>
+        <downNum>6</downNum>
+        <imgurl>http://10.0.2.2:8080/downloadfile/img/shuihuzhuan.png</imgurl>
+        <downLoadUrl>http://10.0.2.2:8080/downloadfile/txt/shuihuzhuan.txt</downLoadUrl>
+        <readOnlineUrl>http://10.0.2.2:8080/downloadfile/bookrank/bookxml/shuihuzhuan.xml</readOnlineUrl>
+     </rankNum>
+     <rankNum id="4">
+        <name>三国演义</name>
+        <author>罗贯中</author>
+        <clickNum>6</clickNum>
+        <downNum>3</downNum>
+        <imgurl>http://10.0.2.2:8080/downloadfile/img/sanguoyanyi.png</imgurl>
+        <downLoadUrl>http://10.0.2.2:8080/downloadfile/txt/sanguoyanyi.txt</downLoadUrl>
+        <readOnlineUrl>http://10.0.2.2:8080/downloadfile/bookrank/bookxml/sanguoyanyi.xml</readOnlineUrl>
+     </rankNum>
+      
+</ranks>
+   
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>   
+    <style name="book_cover_img">
+        <item name="android:layout_width">@dimen/book_cover_img_width</item>
+        <item name="android:layout_height">@dimen/book_cover_img_height</item>
+        <item name="android:layout_gravity">top|center</item>        
+        <item name="android:layout_marginTop">@dimen/book_cover_img_margin_top</item>
+        <item name="android:background">@drawable/cover</item>
+    </style> 
+    
+    <style name="book_cover_txt">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item> 
+        <item name="android:layout_gravity">top</item>
+        <item name="android:gravity">center</item>    
+        <item name="android:layout_marginTop">@dimen/book_cover_txt_margin_top</item>    
+        <item name="android:layout_marginLeft">@dimen/book_cover_txt_margin_left</item>
+        
+        <item name="android:clickable">false</item> 
+        <item name="android:focusable">false</item> 
+        <item name="android:freezesText">true</item> 
+        
+        <item name="android:textSize">@dimen/book_cover_txt_text_size</item>
+        <item name="android:textColor">#ff996633</item>        
+    </style>   
+ 
+ 
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_bottom_text_size">12sp</dimen>
+    <dimen name="bookshelf_header_height">36dp</dimen>
+    
+    <dimen name="default_text_size">16.0sp</dimen>
+    
+    <dimen name="title_bar_height">48.0dip</dimen>
+    <dimen name="title_bar_text_height">18.0dip</dimen>
+    <dimen name="title_bar_width_padding">16.0dip</dimen>
+    <dimen name="title_bar_sec_height">16.0dip</dimen>
+    
+    <dimen name="book_cover_img_width">80dip</dimen>
+    <dimen name="book_cover_img_height">110dip</dimen>
+    <dimen name="book_cover_img_margin_top">15dip</dimen>
+    
+    <dimen name="book_cover_txt_width">60dip</dimen>
+    <dimen name="book_cover_txt_margin_left">20dip</dimen>
+    <dimen name="book_cover_txt_margin_top">33dip</dimen>
+    <dimen name="book_cover_txt_text_size">11sp</dimen>
+</resources>

@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<chapters>
+    <chapter id="1">
+        <name>第一章 三国—石破天惊</name>
+        <text>    
+三国—
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+       
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+        </text>       
+    </chapter>
+    <chapter id="2">
+       <name>第二章 三国—石破天惊</name>
+       <text>
+ 三国—
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+       
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+         </text>     
+    </chapter>
+    <chapter id="3">
+        <name>第三章 三国—石破天惊</name>
+        <text> 三国—
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+       
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+       </text>        
+    </chapter>
+    <chapter id="4">
+        <name>第四章 三国—石破天惊</name>
+        <text> 三国—
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+       
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+
+
+        不过eoe提醒大家Android系统还提供了另一种XML解析方式可以使你更好的处理这种情况，就是Pull方式解析XML数据。
+
+        Pull解析器和SAX解析器虽有区别但也有相似性。他们的区别为：SAX解析器的工作方式是自动将事件推入注册的事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。这是他们主要的区别。
+
+        而他们的相似性在运行方式上，Pull解析器也提供了类似SAX的事件（开始文档START_DOCUMENT和结束文档END_DOCUMENT，开始元素START_TAG和结束元素END_TAG，遇到元素内容TEXT等），但需要调用next() 方法提取它们（主动提取事件）。
+
+        Android系统中和Pull方式相关的包为org.xmlpull.v1，在这个包中提供了Pull解析器的工厂类XmlPullParserFactory和Pull解析器XmlPullParser，XmlPullParserFactory实例调用newPullParser方法创建XmlPullParser解析器实例，接着XmlPullParser实例就可以调用getEventType()和next()等方法依次主动提取事件，并根据提取的事件类型进行相应的逻辑处理。
+
+        下面我们就用上面介绍的Pull方式来实现解析XML形式的USGS地震数据的Demo例子。
+
+        程序首先也是定义解析用到的变量，在定义的用于解析xml数据的方法中
+       </text>  
+    </chapter>
+      
+</chapters>
+   
+

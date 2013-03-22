@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="22dp"
+    android:background="#FF9A9BFE"
+     >
+    <Button 
+        android:layout_marginTop="1dp"
+        android:id="@+id/openlistbtn"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/closed"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        />
+    <TextView 
+        android:textColor="@color/black"
+       android:layout_marginTop="1dp"
+      android:layout_marginLeft="30dp"
+      android:layout_width="wrap_content" 
+      android:text="@string/currentdown" 
+      android:id="@+id/openlistviewtitle" 
+      android:layout_height="wrap_content" 
+      android:textSize="16dp"
+      android:layout_alignParentTop="true"></TextView>
+  <ImageView 
+      android:src="@drawable/verticalline"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      />
+   <ImageView 
+       android:layout_alignParentBottom="true"
+      android:src="@drawable/verticalline"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      />
+</RelativeLayout>

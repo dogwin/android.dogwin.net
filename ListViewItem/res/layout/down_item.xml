@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/size20dp"
+    android:background="@drawable/listitem"
+    >
+    
+<TextView 
+    android:layout_centerInParent="true"
+    android:layout_alignParentLeft="true"
+    android:textSize="@dimen/size12dp"
+    android:id="@+id/idtext"
+    android:text="@string/idnum"
+    android:textColor="@color/black"
+    android:layout_width="@dimen/size20dp"
+    android:layout_height="wrap_content"
+  />
+<TextView 
+    android:singleLine="true"
+    android:layout_marginLeft="@dimen/size20dp"
+    android:layout_marginRight="@dimen/size50dp"
+    android:id="@+id/filenametext"
+    android:text="@string/filename"
+    android:textColor="@color/black"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  />
+ <TextView 
+     android:layout_alignParentBottom="true"
+     android:textSize="@dimen/size8dp"
+    android:layout_alignParentRight="true"
+    android:id="@+id/progresstext"
+    android:text="@string/progressnum"
+    android:textColor="@color/black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  />
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ListViewItem!</string>
+    <string name="app_name">ListViewItem</string>
+    <string name="download">下载</string>
+    <string name="readonline">阅读</string>
+    <string name="clicknum">点击量</string>
+ <string name="downnum">下载量</string>
+  <string name="bookname">书名</string>
+  <string name="bookauthor">作者</string>
+ <string name="top10">Top10</string>
+  <string name="currentdown">正在下载</string>
+  <string name="downlist">下载列表</string>
+  <string name="downover">已下载</string>
+ <string name="prepage">上一章</string>
+  <string name="content">目    录</string>
+  <string name="nextpage">下一章</string>
+ <string name="back">返      回</string>
+  <string name="progressnum">进度：18.9%</string>
+  <string name="idnum">11:</string>    
+   <string name="filename">文件名</string>  
+         
+</resources>

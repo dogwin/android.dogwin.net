@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="@dimen/size100dp"
+  android:background="@color/white">
+  <TextView
+  android:text="1"
+  android:id="@+id/ranknumtext"
+  android:layout_width="@dimen/size20dp"
+  android:layout_height="wrap_content"
+  android:textSize="@dimen/size14dp"
+  android:textColor="@color/black"
+  android:layout_alignParentLeft="true"
+  />
+  <LinearLayout
+  android:layout_marginTop="@dimen/size10dp"
+  android:layout_marginLeft="@dimen/size130dp"
+  android:layout_width="@dimen/size130dp"
+  android:layout_height="@dimen/size100dp"
+  android:orientation="vertical"
+  >
+  <TextView
+  android:text="@string/bookname"
+  android:lines="1"
+  android:id="@+id/nametext"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:textSize="@dimen/size16dp"
+  android:textColor="@color/black"
+  />
+  <TextView
+  android:text="@string/bookauthor"
+  android:id="@+id/authortext"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:textSize="@dimen/size14dp"
+  android:textColor="@color/black"
+  />
+  <TextView
+  android:text="@string/clicknum"
+  android:id="@+id/clicknumtext"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:textSize="@dimen/size14dp"
+  android:textColor="@color/black"
+  />
+  <TextView
+  android:text="@string/downnum"
+  android:id="@+id/downnumtext"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:textSize="@dimen/size14dp"
+  android:textColor="@color/black"
+  />
+  
+  </LinearLayout>
+  
+  <LinearLayout
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:layout_alignParentRight="true"
+  android:layout_centerInParent="true"
+  >
+   <Button
+   android:id="@+id/readonlinebtn"
+  android:text="@string/readonline"
+  android:textSize="@dimen/size20dp"
+  android:textColor="@color/black"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  />
+  <Button
+  android:id="@+id/downloadbtn"
+  android:text="@string/download"
+  android:textSize="@dimen/size20dp"
+  android:textColor="@color/black"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  />
+  
+  </LinearLayout>
+  <ImageView android:id="@+id/imgview" android:layout_marginLeft="@dimen/size20dp" android:layout_height="@dimen/size100dp" android:layout_width="@dimen/size100dp" android:layout_alignParentLeft="true"></ImageView>
+ 
+ 
+</RelativeLayout>
+
+
+
+

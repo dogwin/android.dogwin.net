@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="@color/white">
+  <com.zhongxicai.Beans.TextBar
+  android:id="@+id/readonlinetextbar"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  />
+   <com.zhongxicai.Beans.TopBar
+   android:layout_alignParentTop="true"
+   android:id="@+id/readonlinetopbar"
+  android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+ />
+  <com.zhongxicai.Beans.ReadOnlineBottomBar
+   android:id="@+id/readonlinebottombar"
+   android:layout_alignParentBottom="true"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   />
+</RelativeLayout>

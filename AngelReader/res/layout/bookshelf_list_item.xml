@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/shelf_image_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bookshelf_layer_left" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/shelf_image_right"
+        android:layout_toRightOf="@+id/shelf_image_left"
+        android:background="@drawable/bookshelf_layer_center"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/FrameLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView_1"
+                style="@style/book_cover_img" />
+
+            <TextView
+                android:id="@+id/TextView1"
+                style="@style/book_cover_txt"
+                android:text="天龙八部" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/FrameLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView_2"
+                style="@style/book_cover_img" />
+
+            <TextView
+                android:id="@+id/TextView2"
+                style="@style/book_cover_txt"
+                android:text="天龙八部" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/FrameLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageView_3"
+                style="@style/book_cover_img" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                style="@style/book_cover_txt"
+                android:text="天龙八部" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/shelf_image_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bookshelf_layer_right" />
+
+</RelativeLayout>
