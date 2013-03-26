@@ -3,6 +3,11 @@
 
     <string name="app_name">Buddha</string>
     <string name="action_settings">Settings</string>
-    <string name="serverurl">http://www.dogwin.net/update.xml</string>
+    <string name="serverurl">http://192.168.1.103/</string>
+    <string name="menu_tell_friend">分享</string>
+    <string name="menu_send_adv">反馈</string>
+    <string name="menu_about_us">关于</string>
+    <string name="menu_update">更新</string>
+    <string name="menu_exit">退出</string>
 
 </resources>

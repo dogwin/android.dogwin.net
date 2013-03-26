@@ -5,15 +5,16 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
+import dogwin.net.check.AutoUpdata;
 import dogwin.net.check.Connectivity;
 
 public class Buddha extends Activity {
+	
+	AutoUpdata autoUpdata;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,22 +46,18 @@ public class Buddha extends Activity {
 		public void onReceive(Context context, Intent intent) {
 			// TODO Auto-generated method stub
 			if(Connectivity.isConnected(context)){
-				Toast.makeText(Buddha.this, "connected!" , Toast.LENGTH_LONG).show();
+				try {
+					Toast.makeText(Buddha.this, autoUpdata.getVersionName() , Toast.LENGTH_LONG).show();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 			}else{
 				Toast.makeText(Buddha.this, "disconnected!" , Toast.LENGTH_LONG).show();
 			}
 		}
 	};
+
 	
-	/* 
-	 * 获取当前程序的版本号  
-	 */  
-	
-	private String getVersionName() throws Exception{  
-	    //获取packagemanager的实例   
-	    PackageManager packageManager = getPackageManager();  
-	    //getPackageName()是你当前类的包名，0代表是获取版本信息  
-	    PackageInfo packInfo = packageManager.getPackageInfo(getPackageName(), 0);  
-	    return packInfo.versionName;   
-	}
 }
