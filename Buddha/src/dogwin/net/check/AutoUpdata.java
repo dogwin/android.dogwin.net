@@ -25,7 +25,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import dogwin.net.apps.Buddha;
 import dogwin.net.apps.R;
+import dogwin.net.apps.MenuActivity.CheckVersionTask;
 import dogwin.net.check.DownLoadManager;
 import dogwin.net.check.UpdataInfo;
 import dogwin.net.check.UpdataInfoParser;
@@ -47,6 +49,8 @@ public class AutoUpdata extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		new Thread(new CheckVersionTask()).start();//执行检查服务器数据库版本号
 	}
 
 	@Override
@@ -58,7 +62,6 @@ public class AutoUpdata extends Activity{
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		Intent intent;
 		switch (item.getItemId()) {
 		case R.id.menu_tell_friend://分享
 			break;
@@ -134,16 +137,17 @@ public class AutoUpdata extends Activity{
 			case GET_UNDATAINFO_ERROR:
 				// 服务器超时
 				Toast.makeText(getApplicationContext(), "获取服务器更新信息失败", 1).show();
-				// LoginMain();
+				LoginMain();
 				break;
 			case SDCARD_NOMOUNTED:
 				// sdcard不可用
 				Toast.makeText(getApplicationContext(), "SD卡不可用",1).show();
+				LoginMain();
 				break;
 			case DOWN_ERROR:
 				// 下载apk失败
 				Toast.makeText(getApplicationContext(), "下载新版本失败", 1).show();
-				// LoginMain();
+				LoginMain();
 				break;
 			}
 		}
@@ -171,7 +175,8 @@ public class AutoUpdata extends Activity{
 		// 当点取消按钮时进行登录
 		builer.setNegativeButton("取消", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
-				// LoginMain();
+				LoginMain();
+				Log.i(TAG, "取消");
 			}
 		});
 		AlertDialog dialog = builer.create();
@@ -213,13 +218,22 @@ public class AutoUpdata extends Activity{
 	}
 	
 	// 安装apk
-		protected void installApk(File file) {
-			Intent intent = new Intent();
-			// 执行动作
-			intent.setAction(Intent.ACTION_VIEW);
-			// 执行的数据类型
-			intent.setDataAndType(Uri.fromFile(file),
-					"application/vnd.android.package-archive");
-			startActivity(intent);
-		}
+	protected void installApk(File file) {
+		Intent intent = new Intent();
+		// 执行动作
+		intent.setAction(Intent.ACTION_VIEW);
+		// 执行的数据类型
+		intent.setDataAndType(Uri.fromFile(file),
+				"application/vnd.android.package-archive");
+		startActivity(intent);
+	}
+	/* 
+	 * 进入程序的主界面 
+	 */  
+	private void LoginMain(){  
+	    Intent intent = new Intent(AutoUpdata.this,Buddha.class);  
+	    startActivity(intent);  
+	    //结束掉当前的activity   
+	    this.finish();  
+	}  
 }
