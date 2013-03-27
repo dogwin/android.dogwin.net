@@ -10,10 +10,14 @@ import java.net.URL;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -27,7 +31,6 @@ import android.widget.Toast;
 
 import dogwin.net.apps.Buddha;
 import dogwin.net.apps.R;
-import dogwin.net.apps.MenuActivity.CheckVersionTask;
 import dogwin.net.check.DownLoadManager;
 import dogwin.net.check.UpdataInfo;
 import dogwin.net.check.UpdataInfoParser;
@@ -52,7 +55,8 @@ public class AutoUpdata extends Activity{
 		
 		new Thread(new CheckVersionTask()).start();//执行检查服务器数据库版本号
 	}
-
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = new MenuInflater(this);
@@ -85,12 +89,21 @@ public class AutoUpdata extends Activity{
 		PackageInfo packageInfo=packageManager.getPackageInfo(getPackageName(), 0);
 		return packageInfo.versionName;
 	}
+	public int getVersionCode() throws Exception{
+		//获取packgaemanager的实例
+		PackageManager packageManager=getPackageManager();
+		//getPackageName()是当前包名，0代表获取版本信息
+		PackageInfo packageInfo=packageManager.getPackageInfo(getPackageName(), 0);
+		return packageInfo.versionCode;
+	}
 	
 	//从服务器获取xml解析并进行比对版本号
 	public class CheckVersionTask implements Runnable{
 		@Override
+		
 		public void run() {
 			try {
+				localVersion = String.valueOf(getVersionCode());
 				// 从资源文件获取服务器地址
 				String path=getResources().getString(R.string.serverurl);
 				// 包装成url对象
@@ -99,12 +112,13 @@ public class AutoUpdata extends Activity{
 				conn.setConnectTimeout(5000);
 				InputStream is=conn.getInputStream();
 				info=UpdataInfoParser.getUpdataInfo(is);
-				System.out.println("MenuActivity--->info="+info);
+				System.out.println("MenuActivity--->info="+info.getVersion()+"<<<==localV==>>>"+localVersion);
 				if(info.getVersion().equals(localVersion)){
 					Log.i(TAG, "版本号相同，无需升级");
 					Message msg=new Message();
 					msg.what=UPDATA_NONEED;
 				}else if(!info.getVersion().equals(localVersion)){
+					
 					Log.i(TAG, "版本号不同，提示用户升级");
 					Message msg=new Message();
 					msg.what=UPDATA_CLIENT;
