@@ -31,7 +31,6 @@ public class Buddha extends Activity {
 	
 	Button btone;
 	IconShow iconShow;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -111,7 +110,7 @@ public class Buddha extends Activity {
 		// TODO Auto-generated method stub
 		super.onStop();
 		Log.v("TAG", "back Run");
-		iconShow.addNotification();
+		createNotification();
 	}
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 	@SuppressLint("NewApi")
@@ -128,5 +127,4 @@ public class Buddha extends Activity {
 
 		 notificationManager.notify(0, noti);
 	}
-	
 }
