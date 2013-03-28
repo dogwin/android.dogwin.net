@@ -117,6 +117,7 @@ public class AutoUpdata extends Activity{
 					Log.i(TAG, "版本号相同，无需升级");
 					Message msg=new Message();
 					msg.what=UPDATA_NONEED;
+					LoginMain();
 				}else if(!info.getVersion().equals(localVersion)){
 					
 					Log.i(TAG, "版本号不同，提示用户升级");

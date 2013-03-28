@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dogwin.net.apps"
-    android:versionCode="1"
+    android:versionCode="2"
     android:versionName="Beta 1.0.1" >
 
     <uses-sdk
@@ -10,9 +10,10 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
-	<!-- <uses-permission android:name="android.permission.INSTALL_PACKAGES"></uses-permission> -->
 	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.VIBRATE"/><!-- 振动 -->
+	
 	<!-- 
 	<uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -34,6 +35,7 @@
             </intent-filter>
         </activity>
         <activity android:name="dogwin.net.apps.Buddha"></activity>
+        <activity android:name="dogwin.net.backRun.IconShow"></activity>
     </application>
 
 </manifest>

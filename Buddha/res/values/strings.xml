@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- layout buddha -->
     <string name="app_name">Buddha</string>
     <string name="action_settings">Settings</string>
+    <string name="btone">振动</string>
+    
     <string name="serverurl">http://stagingworkspace.com/darrenpage/xml.html</string>
     <string name="menu_tell_friend">分享</string>
     <string name="menu_send_adv">反馈</string>
