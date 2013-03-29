@@ -112,14 +112,21 @@ public class Buddha extends Activity {
 		Log.v("TAG", "back Run");
 		createNotification();
 	}
+	
+	//Icon Notification
+	
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 	@SuppressLint("NewApi")
 	public void createNotification(){
 		Intent intent = new Intent(this, Buddha.class);
 		PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
+		//title
+		String title = getResources().getString(R.string.app_name);
+		String subject = getResources().getString(R.string.subject);
+		
 		Notification noti = new Notification.Builder(this)
-        .setContentTitle("Buddha")
-        .setContentText("妙缘").setSmallIcon(R.drawable.ic_launcher)
+        .setContentTitle(title)
+        .setContentText(subject).setSmallIcon(R.drawable.ic_launcher)
         .setContentIntent(pIntent).build();
 		 NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 		    // Hide the notification after its selected
