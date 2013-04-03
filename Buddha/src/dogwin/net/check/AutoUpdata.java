@@ -52,7 +52,7 @@ public class AutoUpdata extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		setContentView(R.layout.autoupdata);
 		new Thread(new CheckVersionTask()).start();//执行检查服务器数据库版本号
 	}
 	
