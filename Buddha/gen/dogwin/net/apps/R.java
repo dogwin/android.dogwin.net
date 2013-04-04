@@ -28,12 +28,14 @@ public final class R {
         public static final int action_settings=0x7f080003;
         public static final int analogClock1=0x7f080001;
         public static final int auto_bg=0x7f080000;
+        public static final int books=0x7f080006;
         public static final int btone=0x7f080002;
-        public static final int menu_about_us=0x7f080006;
-        public static final int menu_exit=0x7f080008;
-        public static final int menu_send_adv=0x7f080005;
-        public static final int menu_tell_friend=0x7f080004;
-        public static final int menu_update=0x7f080007;
+        public static final int buddha=0x7f080004;
+        public static final int master=0x7f080008;
+        public static final int music=0x7f080005;
+        public static final int quit=0x7f08000a;
+        public static final int setting=0x7f080009;
+        public static final int story=0x7f080007;
     }
     public static final class layout {
         public static final int autoupdata=0x7f030000;
@@ -49,15 +51,19 @@ public final class R {
         /**  layout buddha 
          */
         public static final int app_name=0x7f050000;
+        public static final int books=0x7f050007;
         public static final int btone=0x7f050002;
-        public static final int menu_about_us=0x7f050007;
-        public static final int menu_exit=0x7f050009;
-        public static final int menu_send_adv=0x7f050006;
-        public static final int menu_tell_friend=0x7f050005;
-        public static final int menu_update=0x7f050008;
+        /**  menu begin 
+         */
+        public static final int buddha=0x7f050005;
+        public static final int master=0x7f050009;
+        public static final int music=0x7f050006;
+        public static final int quit=0x7f05000b;
         /**  layout buddha end 
          */
         public static final int serverurl=0x7f050004;
+        public static final int setting=0x7f05000a;
+        public static final int story=0x7f050008;
         /**  subject 
          */
         public static final int subject=0x7f050003;

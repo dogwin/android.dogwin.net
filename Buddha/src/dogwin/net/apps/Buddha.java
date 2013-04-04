@@ -91,15 +91,20 @@ public class Buddha extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.menu_tell_friend://分享
+		case R.id.buddha://诸佛菩萨
 			break;
-		case R.id.menu_send_adv://反馈
+		case R.id.music://佛教音乐
 			break;
-		case R.id.menu_about_us://关于
+		case R.id.books://佛教经典
 			break;
-		case R.id.menu_update://更新
+		case R.id.story://佛教故事
 			break;
-		case R.id.menu_exit://退出
+		case R.id.master://祖师大德
+			break;
+		case R.id.setting://系统设置
+			break;
+		case R.id.quit://退出
+			Log.v("Main","menu");
 		}
 		
 		return super.onOptionsItemSelected(item);

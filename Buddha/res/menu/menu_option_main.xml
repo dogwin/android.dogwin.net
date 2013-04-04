@@ -1,29 +1,39 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/menu_tell_friend"
+        android:id="@+id/buddha"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/menu_tell_friend"/>
+        android:title="@string/buddha"/>
     <item
-        android:id="@+id/menu_send_adv"
+        android:id="@+id/music"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/menu_send_adv"/>
+        android:title="@string/music"/>
     <item
-        android:id="@+id/menu_about_us"
+        android:id="@+id/books"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/menu_about_us"/>
+        android:title="@string/books"/>
     <item
-        android:id="@+id/menu_update"
+        android:id="@+id/story"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/menu_update"/>
+        android:title="@string/story"/>
     <item
-        android:id="@+id/menu_exit"
+        android:id="@+id/master"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/menu_exit"/>
+        android:title="@string/master"/>
+    <item
+        android:id="@+id/setting"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/setting"/>
+    <item
+        android:id="@+id/quit"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/quit"/>
 
 </menu>

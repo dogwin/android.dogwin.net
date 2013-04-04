@@ -10,10 +10,16 @@
     <!-- layout buddha end -->
     
     <string name="serverurl">http://stagingworkspace.com/darrenpage/xml.html</string>
-    <string name="menu_tell_friend">分享</string>
-    <string name="menu_send_adv">反馈</string>
-    <string name="menu_about_us">关于</string>
-    <string name="menu_update">更新</string>
-    <string name="menu_exit">退出</string>
+    
 	
+    <!-- menu begin -->
+    <string name="buddha">诸佛菩萨</string>
+    <string name="music">佛教音乐</string>
+    <string name="books">佛教经典</string>
+    <string name="story">佛教故事</string>
+    <string name="master">祖师大德</string>
+    <string name="setting">系统设置</string>
+    <string name="quit">退出</string>
+    <!-- <string name=""></string> -->
+    <!-- menu end -->
 </resources>
