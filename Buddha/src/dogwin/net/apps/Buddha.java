@@ -1,6 +1,5 @@
 package dogwin.net.apps;
 
-import android.R.integer;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -24,7 +23,6 @@ import android.widget.Button;
 import android.widget.Toast;
 import dogwin.net.backRun.IconShow;
 import dogwin.net.buddha.Fo;
-import dogwin.net.check.AutoUpdata;
 import dogwin.net.check.Connectivity;
 
 
@@ -35,6 +33,7 @@ public class Buddha extends Activity {
 	Button btone;
 	IconShow iconShow;
 	int pid;
+	public boolean IconFlag=true;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -98,10 +97,10 @@ public class Buddha extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.buddha://诸佛菩萨
+			IconFlag = false;
 			Intent bintent = new Intent(Buddha.this,Fo.class);  
 		    startActivity(bintent);
-		    this.finish();
-		    
+		    //this.finish();
 			break;
 		case R.id.music://佛教音乐
 			break;
@@ -126,9 +125,16 @@ public class Buddha extends Activity {
 		// TODO Auto-generated method stub
 		super.onStop();
 		Log.v("TAG", "back Run");
-		createNotification();
+		if(IconFlag){
+			createNotification();
+		}
 	}
-	
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+		IconFlag = false;
+	}
 	//Icon Notification
 	
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)

@@ -37,7 +37,9 @@
         <activity android:name="dogwin.net.apps.Buddha"></activity>
         <activity android:name="dogwin.net.backRun.IconShow"></activity>
         <!-- buddha -->
-        <activity android:name="dogwin.net.buddha.Fo"></activity>
+        <activity 
+            android:name="dogwin.net.buddha.Fo"
+            android:theme="@android:style/Theme.NoTitleBar" />
     </application>
 
 </manifest>
