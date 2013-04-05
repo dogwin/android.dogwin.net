@@ -1,5 +1,6 @@
 package dogwin.net.apps;
 
+import android.R.integer;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -22,6 +23,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import dogwin.net.backRun.IconShow;
+import dogwin.net.buddha.Fo;
+import dogwin.net.check.AutoUpdata;
 import dogwin.net.check.Connectivity;
 
 
@@ -31,11 +34,14 @@ public class Buddha extends Activity {
 	
 	Button btone;
 	IconShow iconShow;
+	int pid;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.buddha);
 		
+		
+		this.pid = android.os.Process.myPid();
 		//check network
 	
 		
@@ -92,6 +98,10 @@ public class Buddha extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.buddha://诸佛菩萨
+			Intent bintent = new Intent(Buddha.this,Fo.class);  
+		    startActivity(bintent);
+		    this.finish();
+		    
 			break;
 		case R.id.music://佛教音乐
 			break;
@@ -104,7 +114,8 @@ public class Buddha extends Activity {
 		case R.id.setting://系统设置
 			break;
 		case R.id.quit://退出
-			Log.v("Main","menu");
+			Log.v("TAG","menu");
+			android.os.Process.sendSignal(pid, android.os.Process.SIGNAL_KILL);
 		}
 		
 		return super.onOptionsItemSelected(item);
