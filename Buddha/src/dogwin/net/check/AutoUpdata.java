@@ -31,9 +31,15 @@ import android.widget.Toast;
 
 import dogwin.net.apps.Buddha;
 import dogwin.net.apps.R;
+import dogwin.net.books.BooksApp;
+import dogwin.net.buddha.BuddhaApp;
 import dogwin.net.check.DownLoadManager;
 import dogwin.net.check.UpdataInfo;
 import dogwin.net.check.UpdataInfoParser;
+import dogwin.net.master.MasterApp;
+import dogwin.net.music.MusicApp;
+import dogwin.net.setting.SettingApp;
+import dogwin.net.story.StoryApp;
 
 public class AutoUpdata extends Activity{
 	private final String TAG = this.getClass().getName();
@@ -46,7 +52,10 @@ public class AutoUpdata extends Activity{
 
 	private UpdataInfo info;
 	private String localVersion;
-
+	
+	int pid;
+	public boolean IconFlag=true;
+	Intent bintent;
 	//private FunnyLifeApplication application;
 	
 	@Override
@@ -54,6 +63,7 @@ public class AutoUpdata extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.autoupdata);
 		new Thread(new CheckVersionTask()).start();//执行检查服务器数据库版本号
+		this.pid = android.os.Process.myPid();
 	}
 	
 	
@@ -68,19 +78,41 @@ public class AutoUpdata extends Activity{
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.buddha://诸佛菩萨
+			IconFlag = false;
+			bintent = new Intent(AutoUpdata.this,BuddhaApp.class);  
+		    startActivity(bintent);
+		    //this.finish();
 			break;
 		case R.id.music://佛教音乐
+			IconFlag = false;
+			bintent = new Intent(AutoUpdata.this,MusicApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.books://佛教经典
+			IconFlag = false;
+			bintent = new Intent(AutoUpdata.this,BooksApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.story://佛教故事
+			IconFlag = false;
+			bintent = new Intent(AutoUpdata.this,StoryApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.master://祖师大德
+			IconFlag = false;
+			bintent = new Intent(AutoUpdata.this,MasterApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.setting://系统设置
+			IconFlag = false;
+			bintent = new Intent(AutoUpdata.this,SettingApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.quit://退出
+			Log.v("TAG","menu");
+			android.os.Process.sendSignal(pid, android.os.Process.SIGNAL_KILL);
 		}
+		
 		return super.onOptionsItemSelected(item);
 	}
 	
