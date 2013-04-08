@@ -38,8 +38,18 @@
         <activity android:name="dogwin.net.backRun.IconShow"></activity>
         <!-- buddha -->
         <activity 
-            android:name="dogwin.net.buddha.Fo"
-            android:theme="@android:style/Theme.NoTitleBar" />
+            android:name="dogwin.net.buddha.BuddhaApp"
+            android:label="@string/buddha"/>
+        <activity android:name="dogwin.net.music.MusicApp"
+            android:label="@string/music"></activity>
+        <activity android:name="dogwin.net.books.BooksApp"
+            android:label="@string/books"></activity>
+        <activity android:name="dogwin.net.story.StoryApp"
+            android:label="@string/story"></activity>
+        <activity android:name="dogwin.net.master.MasterApp"
+            android:label="@string/master"></activity>
+        <activity android:name="dogwin.net.setting.SettingApp"
+            android:label="@string/setting"></activity>
     </application>
 
 </manifest>

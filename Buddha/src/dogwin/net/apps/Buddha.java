@@ -22,8 +22,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import dogwin.net.backRun.IconShow;
-import dogwin.net.buddha.Fo;
+import dogwin.net.books.BooksApp;
+import dogwin.net.buddha.BuddhaApp;
 import dogwin.net.check.Connectivity;
+import dogwin.net.master.MasterApp;
+import dogwin.net.music.MusicApp;
+import dogwin.net.setting.SettingApp;
+import dogwin.net.story.StoryApp;
 
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -34,6 +39,7 @@ public class Buddha extends Activity {
 	IconShow iconShow;
 	int pid;
 	public boolean IconFlag=true;
+	Intent bintent;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -98,19 +104,34 @@ public class Buddha extends Activity {
 		switch (item.getItemId()) {
 		case R.id.buddha://诸佛菩萨
 			IconFlag = false;
-			Intent bintent = new Intent(Buddha.this,Fo.class);  
+			bintent = new Intent(Buddha.this,BuddhaApp.class);  
 		    startActivity(bintent);
 		    //this.finish();
 			break;
 		case R.id.music://佛教音乐
+			IconFlag = false;
+			bintent = new Intent(Buddha.this,MusicApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.books://佛教经典
+			IconFlag = false;
+			bintent = new Intent(Buddha.this,BooksApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.story://佛教故事
+			IconFlag = false;
+			bintent = new Intent(Buddha.this,StoryApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.master://祖师大德
+			IconFlag = false;
+			bintent = new Intent(Buddha.this,MasterApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.setting://系统设置
+			IconFlag = false;
+			bintent = new Intent(Buddha.this,SettingApp.class);  
+		    startActivity(bintent);
 			break;
 		case R.id.quit://退出
 			Log.v("TAG","menu");
