@@ -1,5 +1,16 @@
 package dogwin.net.apps;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -13,13 +24,12 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import dogwin.net.backRun.IconShow;
 import dogwin.net.books.BooksApp;
@@ -40,6 +50,8 @@ public class Buddha extends Activity {
 	int pid;
 	public boolean IconFlag=true;
 	Intent bintent;
+	String edy_url;
+	TextView edw_content;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -53,7 +65,7 @@ public class Buddha extends Activity {
 		IntentFilter mFilter = new IntentFilter();  
         mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);  
         registerReceiver(mReceiver, mFilter); 
-        
+        /*
         btone = (Button)this.findViewById(R.id.btone);
         
         btone.setOnClickListener(new View.OnClickListener() {
@@ -64,8 +76,18 @@ public class Buddha extends Activity {
 				Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 				vibrator.vibrate(1000);
 			}
-		});
-        
+		});*/
+        edy_url = getResources().getString(R.string.EDW_Url);
+        edw_content = (TextView)this.findViewById(R.id.edw_content);
+        //edw_content.setText(doTranslate(edy_url));
+        JSONObject obj = GetJsonObject(edy_url);  
+        StringBuilder sb = new StringBuilder();  
+        try {
+            sb.append("msg: " + obj.getString("msg") + "/n");  
+        } catch (JSONException e) {  
+            e.printStackTrace();  
+        }
+        edw_content.setText(sb.toString());
 	}
 /*
 	@Override
@@ -102,6 +124,12 @@ public class Buddha extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
+		case R.id.liberation:
+			IconFlag = false;
+			bintent = new Intent(Buddha.this,Buddha.class);  
+		    startActivity(bintent);
+		    //this.finish();
+			break;
 		case R.id.buddha://诸佛菩萨
 			IconFlag = false;
 			bintent = new Intent(Buddha.this,BuddhaApp.class);  
@@ -177,4 +205,38 @@ public class Buddha extends Activity {
 
 		 notificationManager.notify(0, noti);
 	}
+	private JSONObject GetJsonObject(String edy_url) {  
+        HttpClient client = new DefaultHttpClient();  
+        StringBuilder builder = new StringBuilder();  
+        JSONArray jsonArray = null;  
+        HttpGet get = new HttpGet(edy_url);  
+        try {  
+            HttpResponse response = client.execute(get);  
+            BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));  
+            for (String s = reader.readLine(); s != null; s = reader.readLine()) {  
+                builder.append(s);  
+            }  
+            Log.i("json_str", builder.toString());  
+            jsonArray = new JSONArray(builder.toString());  
+            /*for (int i = 0; i < 2; ++i) {  
+                JSONObject jsonObject = jsonArray.getJSONObject(i);  
+                Log.i("msg", jsonObject.getInt("id") + "");  
+                Log.i("website_name", jsonObject.getString("site_name"));  
+                Log.i("website_url", jsonObject.getString("site_url"));  
+                Log.i("category", jsonObject.getInt("category") + "");  
+                Log.i("title", jsonObject.getString("title")); 
+                Log.i("time", jsonObject.getInt("time")+"");
+                Log.i("msg", jsonObject.getString("msg")); 
+            }  */
+           // return jsonArray;
+        } catch (Exception e) {  
+            e.printStackTrace();  
+        }  
+        try {  
+            return jsonArray.getJSONObject(2);  
+        } catch (JSONException e) {  
+            e.printStackTrace();  
+            return null;  
+        }  
+    }  
 }

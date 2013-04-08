@@ -77,6 +77,12 @@ public class AutoUpdata extends Activity{
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
+		case R.id.liberation:
+			IconFlag = false;
+			bintent = new Intent(AutoUpdata.this,Buddha.class);  
+		    startActivity(bintent);
+		    //this.finish();
+			break;
 		case R.id.buddha://诸佛菩萨
 			IconFlag = false;
 			bintent = new Intent(AutoUpdata.this,BuddhaApp.class);  

@@ -8,21 +8,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Buddha" >
 
-    <AnalogClock
-        android:id="@+id/analogClock1"
+    <TextView
+        android:id="@+id/EveryDayWords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp" />
+        android:text="@string/EveryDayWords" 
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-    <Button
-        android:id="@+id/btone"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/edw_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/analogClock1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="74dp"
-        android:text="@string/btone" />
+        android:layout_alignLeft="@+id/EveryDayWords"
+        android:layout_below="@+id/EveryDayWords"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
