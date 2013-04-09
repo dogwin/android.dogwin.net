@@ -1,17 +1,5 @@
 package dogwin.net.apps;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
@@ -27,7 +15,6 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -39,6 +26,7 @@ import dogwin.net.backRun.IconShow;
 import dogwin.net.books.BooksApp;
 import dogwin.net.buddha.BuddhaApp;
 import dogwin.net.check.Connectivity;
+import dogwin.net.check.JSONParser;
 import dogwin.net.master.MasterApp;
 import dogwin.net.music.MusicApp;
 import dogwin.net.setting.SettingApp;
@@ -69,6 +57,8 @@ public class Buddha extends Activity {
 		IntentFilter mFilter = new IntentFilter();  
         mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);  
         registerReceiver(mReceiver, mFilter); 
+        
+		
         /*
         btone = (Button)this.findViewById(R.id.btone);
         
@@ -81,7 +71,10 @@ public class Buddha extends Activity {
 				vibrator.vibrate(1000);
 			}
 		});*/
-       
+		edy_url = getResources().getString(R.string.EDW_Url);
+		edw_content = (TextView)this.findViewById(R.id.edw_content);
+		
+	    
 	}
 /*
 	@Override
@@ -101,10 +94,31 @@ public class Buddha extends Activity {
 			// TODO Auto-generated method stub
 			if(Connectivity.isConnected(context)){
 				//Toast.makeText(Buddha.this, "connected!" , Toast.LENGTH_LONG).show();
-				 edy_url = getResources().getString(R.string.EDW_Url);
-			        
-			     //edw_Json(edy_url);
 			     Log.i("url",edy_url);
+			     
+			     JSONParser jParser = new JSONParser(context);
+				 
+				 // getting JSON string from URL
+				 JSONObject json = jParser.getJSONFromUrl(edy_url);
+				 System.out.println("json=>"+json);
+				 /*
+					try {
+					    // Getting Array of Contacts
+						JSONArray contacts = json.getJSONArray("content");
+					 
+					    // looping through All Contacts
+					    for(int i = 0; i < contacts.length(); i++){
+					        JSONObject c = contacts.getJSONObject(i);
+					        String msg = c.getString("msg");
+					        
+					        edw_content.setText(msg);
+					 
+					 
+					    }
+					} catch (JSONException e) {
+					    e.printStackTrace();
+					}*/
+			     
 			}else{
 				Toast.makeText(Buddha.this, "disconnected!" , Toast.LENGTH_LONG).show();
 			}
@@ -203,64 +217,7 @@ public class Buddha extends Activity {
 
 		 notificationManager.notify(0, noti);
 	}
-	public void edw_Json(String url){
-		/*try {
-			//StringBuffer sb = new StringBuffer();
-			//在测试过程中，经常是用本机做测试服务器，访问本机的IP地址要设置为10.0.2.2
-			String body = getContent(url);
-			Log.i("body",body);
-			JSONArray array = new JSONArray(body);
-			for(int i=0; i<array.length(); i++){
-				JSONObject obj = array.getJSONObject(i);
-				Log.i("obj",obj.getString("msg"));
-				edw_content = (TextView)this.findViewById(R.id.edw_content);
-		        edw_content.setText(obj.getString("msg"));
-			}
-
-			//TextView textView = (TextView)findViewById(R.id.tv);
-			//textView.setText(sb.toString());
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}*/
-		String body;
-		Log.i("body","here work");
-		try {
-			body = getContent(url);
-			Log.i("body",body);
-			JSONArray array = new JSONArray(body);
-			for(int i=0; i<array.length(); i++){
-				JSONObject obj = array.getJSONObject(i);
-				Log.i("obj",obj.getString("msg"));
-				edw_content = (TextView)this.findViewById(R.id.edw_content);
-		        edw_content.setText(obj.getString("msg"));
-			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
 	
-	private String getContent(String url) throws Exception{
-		StringBuilder sb = new StringBuilder();
-		HttpClient client = new DefaultHttpClient();
-		HttpParams httpParams = client.getParams();
-		//设置网络超时参数
-		HttpConnectionParams.setConnectionTimeout(httpParams, 3000);
-		HttpConnectionParams.setSoTimeout(httpParams, 5000);
-		HttpResponse response = client.execute(new HttpGet(url));
-		HttpEntity entity = response.getEntity();
-		if (entity != null) {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"), 8192);
-			String line = null;
-			while ((line = reader.readLine())!= null){
-				sb.append(line + "\n");
-			}
-			reader.close();
-		}
-		return sb.toString();
-	}
 	/**
 	 * edw_content = (TextView)this.findViewById(R.id.edw_content);
 	        edw_content.setText(msg);
