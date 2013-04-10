@@ -1,0 +1,1 @@
+package com.tencent.tauth;public class AuthActivity {}

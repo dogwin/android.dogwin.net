@@ -46,6 +46,12 @@ public class Buddha extends Activity {
 	Intent bintent;
 	String edy_url;
 	TextView edw_content;
+	/**
+	 * username&password
+	 */
+	public static String username;
+	public static String password;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
