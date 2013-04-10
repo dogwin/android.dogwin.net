@@ -1,1 +1,1 @@
-package dogwin.net.check;import android.app.Activity;import android.os.Bundle;public class Login extends Activity{	@Override	protected void onCreate(Bundle savedInstanceState) {		// TODO Auto-generated method stub		super.onCreate(savedInstanceState);			}}
+package dogwin.net.check;public class Login{		public static String username;	public static String password;		public Login(String name,String pass) {		// TODO Auto-generated constructor stub		username = name;		password = pass;	}		public String login_ck(){		return username;	}}

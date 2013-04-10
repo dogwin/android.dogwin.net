@@ -29,6 +29,7 @@ import dogwin.net.books.BooksApp;
 import dogwin.net.buddha.BuddhaApp;
 import dogwin.net.check.Connectivity;
 import dogwin.net.check.JSONParser;
+import dogwin.net.check.Login;
 import dogwin.net.master.MasterApp;
 import dogwin.net.music.MusicApp;
 import dogwin.net.setting.SettingApp;
@@ -49,8 +50,6 @@ public class Buddha extends Activity {
 	/**
 	 * username&password
 	 */
-	public static String username;
-	public static String password;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +118,9 @@ public class Buddha extends Activity {
 					        JSONObject c = contacts.getJSONObject(i);
 					        String msg = c.getString("msg");
 					        System.out.println("msg=>"+msg);
-					        edw_content.setText(msg);
+					        Login login = new Login("dogwin", "mysly0725");
+							Log.i("login===>",login.login_ck());
+					        edw_content.setText(msg+login.login_ck());
 					 
 					 
 					    }

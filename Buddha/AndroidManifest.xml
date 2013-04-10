@@ -51,6 +51,7 @@
             android:label="@string/setting"></activity>
         <activity android:name="dogwin.net.check.JSONParser"></activity>
         <!-- Tencent -->
+        <!-- 
         <activity
 		       android:name="com.tencent.tauth.MainActivity"
 		       android:noHistory="true"
@@ -61,7 +62,7 @@
 		       	<category android:name="android.intent.category.BROWSABLE" />
 		       	<data android:scheme="tencent你的AppId" />
 		    </intent-filter>
-		 </activity>
+		 </activity>-->
 		 
     </application>
 
