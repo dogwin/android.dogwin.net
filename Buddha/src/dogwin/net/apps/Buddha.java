@@ -1,5 +1,7 @@
 package dogwin.net.apps;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
@@ -100,8 +102,8 @@ public class Buddha extends Activity {
 				 
 				 // getting JSON string from URL
 				 JSONObject json = jParser.getJSONFromUrl(edy_url);
-				 System.out.println("json=>"+json);
-				 /*
+				 //System.out.println("json=>"+json);
+				 
 					try {
 					    // Getting Array of Contacts
 						JSONArray contacts = json.getJSONArray("content");
@@ -110,14 +112,14 @@ public class Buddha extends Activity {
 					    for(int i = 0; i < contacts.length(); i++){
 					        JSONObject c = contacts.getJSONObject(i);
 					        String msg = c.getString("msg");
-					        
+					        System.out.println("msg=>"+msg);
 					        edw_content.setText(msg);
 					 
 					 
 					    }
 					} catch (JSONException e) {
 					    e.printStackTrace();
-					}*/
+					}
 			     
 			}else{
 				Toast.makeText(Buddha.this, "disconnected!" , Toast.LENGTH_LONG).show();
