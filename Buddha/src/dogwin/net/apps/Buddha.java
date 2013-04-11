@@ -21,13 +21,16 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import dogwin.net.backRun.IconShow;
 import dogwin.net.books.BooksApp;
 import dogwin.net.buddha.BuddhaApp;
 import dogwin.net.check.Connectivity;
+import dogwin.net.check.DwClient;
 import dogwin.net.check.JSONParser;
 import dogwin.net.check.Login;
 import dogwin.net.master.MasterApp;
@@ -81,7 +84,27 @@ public class Buddha extends Activity {
 		edy_url = getResources().getString(R.string.EDW_Url);
 		edw_content = (TextView)this.findViewById(R.id.edw_content);
 		
-	    
+	    //login
+		ImageButton logining = (ImageButton)this.findViewById(R.id.logining);
+		logining.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if(!DwClient.flag){
+					login();
+					IconFlag = false;
+				}else{
+					IconFlag = false;
+					System.out.println("Buddha flag=>"+DwClient.flag);
+					
+				}
+			}
+		});
+	}
+	protected void login(){
+		Intent logIntent = new Intent(Buddha.this, Login.class);
+		startActivity(logIntent);
 	}
 /*
 	@Override
@@ -118,11 +141,7 @@ public class Buddha extends Activity {
 					        JSONObject c = contacts.getJSONObject(i);
 					        String msg = c.getString("msg");
 					        System.out.println("msg=>"+msg);
-					        Login login = new Login("dogwin", "mysly0725");
-							Log.i("login===>",login.login_ck());
-					        edw_content.setText(msg+login.login_ck());
-					 
-					 
+					        edw_content.setText(msg);
 					    }
 					} catch (JSONException e) {
 					    e.printStackTrace();
@@ -226,10 +245,5 @@ public class Buddha extends Activity {
 
 		 notificationManager.notify(0, noti);
 	}
-	
-	/**
-	 * edw_content = (TextView)this.findViewById(R.id.edw_content);
-	        edw_content.setText(msg);
-	 */
 	
 }

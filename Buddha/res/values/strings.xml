@@ -12,7 +12,7 @@
     <!-- layout buddha end -->
     
     <string name="serverurl">http://stagingworkspace.com/darrenpage/xml.html</string>
-    
+    <string name="loginurl">http://stagingworkspace.com/darrenpage/data/login.php</string>
 	
     <!-- menu begin -->
     <string name="buddha">诸佛菩萨</string>
@@ -25,4 +25,10 @@
     <!-- <string name=""></string> -->
     <!-- menu end -->
     
+    <!-- Login -->
+    <string name="login_title">用户登陆</string>
+    <string name="username">用户：</string>
+    <string name="password">密码：</string>
+    <string name="loginbt">登陆</string>
+    <string name="registerbt">注册</string>
 </resources>

@@ -14,15 +14,24 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="@string/EveryDayWords" 
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:layout_marginTop="95dp"
+        android:text="@string/EveryDayWords"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/edw_content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/EveryDayWords"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/EveryDayWords"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageButton
+        android:id="@+id/logining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>

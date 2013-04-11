@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.23"
+            android:gravity="center"
+            android:text="@string/login_title"/>
+
+        <TableLayout 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content">
+
+            <TableRow 
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp">
+                <TextView 
+                    android:layout_width="0dp" 
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="0.25"
+                    android:gravity="right" 
+                    android:text="@string/username" 
+                     />
+
+                <EditText  
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:id="@+id/username" 
+                    android:singleLine="true">
+                    <requestFocus/>
+                </EditText >    
+            </TableRow>
+
+            <TableRow>
+                <TextView 
+                    android:layout_width="0dp" 
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25" 
+                    android:gravity="right" 
+                    android:text="@string/password" 
+                />
+
+                <EditText  
+                    android:layout_width="0dp" 
+                    android:layout_weight="0.75"
+                    android:id="@+id/password"           
+                    android:password="true"
+                    android:singleLine="true"/>
+             </TableRow>
+        </TableLayout>
+
+        <LinearLayout 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/loginbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loginbt" />
+
+            <Button
+                android:id="@+id/registerbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registerbt" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_filler" 
+            android:layout_height="0dp"            
+            android:layout_width="fill_parent"           
+            android:layout_weight="1"/> 
+
+
+    </LinearLayout>
+</ScrollView>
