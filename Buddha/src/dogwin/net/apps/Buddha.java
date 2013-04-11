@@ -85,8 +85,14 @@ public class Buddha extends Activity {
 		edw_content = (TextView)this.findViewById(R.id.edw_content);
 		
 	    //login
-		ImageButton logining = (ImageButton)this.findViewById(R.id.logining);
+		final ImageButton logining = (ImageButton)this.findViewById(R.id.logining);
+		//set new image
+		if(DwClient.flag){
+			logining.setImageResource(R.drawable.ic_action_name);
+		}
+		
 		logining.setOnClickListener(new View.OnClickListener() {
+			
 			
 			@Override
 			public void onClick(View v) {
@@ -94,9 +100,11 @@ public class Buddha extends Activity {
 				if(!DwClient.flag){
 					login();
 					IconFlag = false;
+					Buddha.this.finish();
 				}else{
 					IconFlag = false;
 					System.out.println("Buddha flag=>"+DwClient.flag);
+					
 					
 				}
 			}

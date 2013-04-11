@@ -143,6 +143,7 @@ public class AutoUpdata extends Activity{
 		@Override
 		
 		public void run() {
+			
 			try {
 				localVersion = String.valueOf(getVersionCode());
 				// 从资源文件获取服务器地址
