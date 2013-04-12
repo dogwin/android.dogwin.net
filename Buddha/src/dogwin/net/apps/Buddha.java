@@ -225,6 +225,7 @@ public class Buddha extends Activity {
 		if(IconFlag){
 			createNotification();
 		}
+		unregisterReceiver(mReceiver);
 	}
 	@Override
 	protected void onRestart() {

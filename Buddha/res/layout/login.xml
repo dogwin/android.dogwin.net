@@ -59,6 +59,20 @@
              </TableRow>
         </TableLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <CheckBox
+                android:id="@+id/keeplog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keeplog"
+                android:checked="true" />
+
+        </LinearLayout>
+
         <LinearLayout 
             android:layout_width="match_parent" 
             android:layout_height="wrap_content" 
