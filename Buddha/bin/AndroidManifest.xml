@@ -53,6 +53,7 @@
             android:label="@string/setting"></activity>
         <activity android:name="dogwin.net.check.JSONParser"></activity>
         <activity android:name="dogwin.net.check.Login"></activity>
+        <activity android:name="dogwin.net.check.DataStore"></activity>
         <!-- Tencent -->
         <!-- 
         <activity
