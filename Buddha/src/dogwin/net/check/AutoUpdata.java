@@ -81,42 +81,48 @@ public class AutoUpdata extends Activity{
 			IconFlag = false;
 			bintent = new Intent(AutoUpdata.this,Buddha.class);  
 		    startActivity(bintent);
-		    //this.finish();
+		    this.finish();
 			break;
 		case R.id.buddha://诸佛菩萨
 			IconFlag = false;
 			bintent = new Intent(AutoUpdata.this,BuddhaApp.class);  
 		    startActivity(bintent);
-		    //this.finish();
+		    this.finish();
 			break;
 		case R.id.music://佛教音乐
 			IconFlag = false;
 			bintent = new Intent(AutoUpdata.this,MusicApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.books://佛教经典
 			IconFlag = false;
 			bintent = new Intent(AutoUpdata.this,BooksApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.story://佛教故事
 			IconFlag = false;
 			bintent = new Intent(AutoUpdata.this,StoryApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.master://祖师大德
 			IconFlag = false;
 			bintent = new Intent(AutoUpdata.this,MasterApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.setting://系统设置
 			IconFlag = false;
 			bintent = new Intent(AutoUpdata.this,SettingApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.quit://退出
 			Log.v("TAG","menu");
-			android.os.Process.sendSignal(pid, android.os.Process.SIGNAL_KILL);
+			android.os.Process.killProcess(pid);
+			super.finish();
 		}
 		
 		return super.onOptionsItemSelected(item);

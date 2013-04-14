@@ -15,6 +15,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -31,9 +33,11 @@ import android.widget.Toast;
 import dogwin.net.backRun.IconShow;
 import dogwin.net.books.BooksApp;
 import dogwin.net.buddha.BuddhaApp;
+import dogwin.net.check.BitmapCreateNew;
 import dogwin.net.check.Connectivity;
 import dogwin.net.check.DwClient;
 import dogwin.net.check.JSONParser;
+import dogwin.net.check.LoadImages;
 import dogwin.net.check.Login;
 import dogwin.net.master.MasterApp;
 import dogwin.net.music.MusicApp;
@@ -57,7 +61,8 @@ public class Buddha extends Activity {
 	public SharedPreferences preferences;
 	static String uc_username,uc_password;
 	static boolean uc_flag;
-	
+	//load images
+	LoadImages loadImages = new LoadImages();
 	/**
 	 * username&password
 	 */
@@ -103,7 +108,11 @@ public class Buddha extends Activity {
 		//set new image
 		if(DwClient.flag||uc_flag){
 			//get the user
-			logining.setImageResource(R.drawable.ic_action_name);
+			
+			Bitmap bitmap = loadImages.loadimgs("http://stagingworkspace.com/darrenpage/data/fo.jpg");
+			BitmapCreateNew bitmapCreateNew = new BitmapCreateNew(bitmap);
+			System.out.println("bitmap=>"+bitmap);
+			logining.setImageBitmap(bitmapCreateNew.newimage(80, 80));
 		}
 		
 		logining.setOnClickListener(new View.OnClickListener() {
@@ -191,42 +200,48 @@ public class Buddha extends Activity {
 			IconFlag = false;
 			bintent = new Intent(Buddha.this,Buddha.class);  
 		    startActivity(bintent);
-		    //this.finish();
+		    this.finish();
 			break;
 		case R.id.buddha://诸佛菩萨
 			IconFlag = false;
 			bintent = new Intent(Buddha.this,BuddhaApp.class);  
 		    startActivity(bintent);
-		    //this.finish();
+		    this.finish();
 			break;
 		case R.id.music://佛教音乐
 			IconFlag = false;
 			bintent = new Intent(Buddha.this,MusicApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.books://佛教经典
 			IconFlag = false;
 			bintent = new Intent(Buddha.this,BooksApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.story://佛教故事
 			IconFlag = false;
 			bintent = new Intent(Buddha.this,StoryApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.master://祖师大德
 			IconFlag = false;
 			bintent = new Intent(Buddha.this,MasterApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.setting://系统设置
 			IconFlag = false;
 			bintent = new Intent(Buddha.this,SettingApp.class);  
 		    startActivity(bintent);
-			break;
+		    this.finish();
+		    break;
 		case R.id.quit://退出
 			Log.v("TAG","menu");
-			android.os.Process.sendSignal(pid, android.os.Process.SIGNAL_KILL);
+			android.os.Process.killProcess(pid);
+			super.finish();
 		}
 		
 		return super.onOptionsItemSelected(item);
