@@ -14,9 +14,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.EditTextPreference;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -50,6 +52,12 @@ public class Buddha extends Activity {
 	Intent bintent;
 	String edy_url;
 	TextView edw_content;
+	//check sharepreferences
+	public EditTextPreference editText;
+	public SharedPreferences preferences;
+	static String uc_username,uc_password;
+	static boolean uc_flag;
+	
 	/**
 	 * username&password
 	 */
@@ -86,8 +94,15 @@ public class Buddha extends Activity {
 		
 	    //login
 		final ImageButton logining = (ImageButton)this.findViewById(R.id.logining);
+		
+		uc_username = Rt_username();
+		uc_password = Rt_password();
+		uc_flag = Rt_flag();
+		System.out.println("user current=>"+uc_username+":"+uc_password+":"+uc_flag);
+		
 		//set new image
-		if(DwClient.flag){
+		if(DwClient.flag||uc_flag){
+			//get the user
 			logining.setImageResource(R.drawable.ic_action_name);
 		}
 		
@@ -97,14 +112,14 @@ public class Buddha extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if(!DwClient.flag){
+				if(!DwClient.flag&&!uc_flag){
 					login();
 					IconFlag = false;
 					Buddha.this.finish();
 				}else{
 					IconFlag = false;
 					System.out.println("Buddha flag=>"+DwClient.flag);
-					
+					//go to the profile page set
 					
 				}
 			}
@@ -254,5 +269,20 @@ public class Buddha extends Activity {
 
 		 notificationManager.notify(0, noti);
 	}
+	//get user current
+	public String Rt_username(){
+		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
+	    return preferences.getString("username", null);
+	}
 	
+	
+	public String Rt_password(){
+		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
+	    return preferences.getString("password", null);
+	}
+	
+	public boolean Rt_flag(){
+		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
+		return preferences.getBoolean("flag", false);
+	}
 }
