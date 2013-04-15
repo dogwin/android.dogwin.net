@@ -1,7 +1,6 @@
 package dogwin.net.check;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.EditTextPreference;
 import android.preference.PreferenceActivity;

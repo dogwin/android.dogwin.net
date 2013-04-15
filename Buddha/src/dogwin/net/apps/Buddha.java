@@ -30,19 +30,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import dogwin.net.backRun.IconShow;
-import dogwin.net.books.BooksApp;
-import dogwin.net.buddha.BuddhaApp;
 import dogwin.net.check.BitmapCreateNew;
 import dogwin.net.check.Connectivity;
 import dogwin.net.check.DwClient;
 import dogwin.net.check.JSONParser;
 import dogwin.net.check.LoadImages;
 import dogwin.net.check.Login;
-import dogwin.net.master.MasterApp;
-import dogwin.net.music.MusicApp;
 import dogwin.net.publics.Menus;
-import dogwin.net.setting.SettingApp;
-import dogwin.net.story.StoryApp;
 
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -61,6 +55,8 @@ public class Buddha extends Activity {
 	public SharedPreferences preferences;
 	static String uc_username,uc_password;
 	static boolean uc_flag;
+	
+	
 	//load images
 	LoadImages loadImages = new LoadImages();
 	/**
@@ -205,7 +201,7 @@ public class Buddha extends Activity {
 		if(DwClient.flag||uc_flag){
 			menu_flag = true;
 		}
-		return super.onOptionsItemSelected(Menus.select_menus(item, Buddha.this, pid, menu_flag));
+		return super.onOptionsItemSelected(menus.select_menus(item, Buddha.this, pid, menu_flag));
 	}
 	
 	@Override
@@ -249,6 +245,7 @@ public class Buddha extends Activity {
 	
 	
 	//get user current
+	
 	public String Rt_username(){
 		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
 	    return preferences.getString("username", null);

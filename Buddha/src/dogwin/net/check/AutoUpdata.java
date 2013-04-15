@@ -57,6 +57,7 @@ public class AutoUpdata extends Activity{
 	static String uc_username,uc_password;
 	static boolean uc_flag;
 	
+	Menus menus = new Menus();
 	//private FunnyLifeApplication application;
 	
 	@Override
@@ -88,7 +89,7 @@ public class AutoUpdata extends Activity{
 		if(DwClient.flag||uc_flag){
 			menu_flag = true;
 		}
-		return super.onOptionsItemSelected(Menus.select_menus(item, AutoUpdata.this, pid, menu_flag));
+		return super.onOptionsItemSelected(menus.select_menus(item, AutoUpdata.this, pid, menu_flag));
 		
 	}
 	
