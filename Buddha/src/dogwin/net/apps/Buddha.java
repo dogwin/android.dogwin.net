@@ -76,7 +76,6 @@ public class Buddha extends Activity {
 		
 		this.pid = android.os.Process.myPid();
 		//check network
-	
 		
 		IntentFilter mFilter = new IntentFilter();  
         mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);  
@@ -207,7 +206,6 @@ public class Buddha extends Activity {
 			menu_flag = true;
 		}
 		return super.onOptionsItemSelected(Menus.select_menus(item, Buddha.this, pid, menu_flag));
-		
 	}
 	
 	@Override
@@ -215,6 +213,7 @@ public class Buddha extends Activity {
 		// TODO Auto-generated method stub
 		super.onStop();
 		Log.v("TAG", "back Run");
+		
 		if(IconFlag){
 			createNotification();
 		}
@@ -247,6 +246,8 @@ public class Buddha extends Activity {
 
 		 notificationManager.notify(0, noti);
 	}
+	
+	
 	//get user current
 	public String Rt_username(){
 		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);

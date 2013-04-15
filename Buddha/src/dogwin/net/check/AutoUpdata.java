@@ -48,7 +48,7 @@ public class AutoUpdata extends Activity{
 	private String localVersion;
 	
 	int pid;
-	public boolean IconFlag=true;
+	public boolean IconFlag=false;
 	Intent bintent;
 	
 	//check sharepreferences
