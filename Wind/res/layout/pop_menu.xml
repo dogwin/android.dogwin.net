@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="88dp"
+    android:background="@drawable/menu_bg"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="60dp"
+    android:layout_marginTop="60dp"
+    android:orientation="vertical" >
+
+     <ListView 
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:id="@+id/pop_menu_list"
+         android:divider="@drawable/menu_divider"
+         android:dividerHeight="2dp"
+         android:entries="@array/settings"
+         android:cacheColorHint="#00000000"
+         android:scrollbars="none"
+         android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+         android:persistentDrawingCache="animation|scrolling"
+         ></ListView>
+
+</LinearLayout>

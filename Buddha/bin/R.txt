@@ -35,7 +35,7 @@ int id fill 0x7f04000d
 int id fill_horizontal 0x7f04000b
 int id fill_vertical 0x7f040009
 int id horizontal 0x7f040000
-int id keeplog 0x7f040018
+int id keeplogin 0x7f040018
 int id left 0x7f040006
 int id liberation 0x7f04001d
 int id loginbt 0x7f040019

@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_bottom_relative"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/main_listlayout_bg" >
+
+        <RelativeLayout
+            android:id="@id/main_top_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" >
+
+            <Button
+                android:id="@id/main_top_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="6dp"
+                android:background="@drawable/main_prompt"
+                android:gravity="center"
+                android:text="@string/main_top_title"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@id/main_top_bt1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@id/main_top_btn"
+                android:layout_alignLeft="@id/main_top_btn"
+                android:layout_alignParentTop="true"
+                android:layout_margin="6dp"
+                android:background="@drawable/selector_btn_set" />
+
+            <Button
+                android:id="@id/main_top_bt2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@id/main_top_btn"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@id/main_top_btn"
+                android:layout_margin="6dp"
+                android:background="@drawable/selector_btn_set" />
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@id/center_body_view_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/main_top_rela" >
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@id/main_handler_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_bottom_relative"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/selector_handle_bar"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/handle_up" />
+
+    <RelativeLayout
+        android:id="@id/main_bottom_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/handlelayout_bg" >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:layout_alignParentTop="true"
+            android:progressDrawable="@drawable/progress_dotted" />
+
+        <ImageView
+            android:id="@+id/list_show_album"
+            android:layout_width="54dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp"
+            android:adjustViewBounds="true"
+            android:background="#00000000"
+            android:contentDescription="@string/content_description"
+            android:minHeight="60dp"
+            android:minWidth="60dp"
+            android:paddingTop="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/default_bg_s" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/list_show_album"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/list_song_name"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/fashion_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/list_song_durction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/fashion_color" />
+        </LinearLayout>
+
+        <ViewFlipper
+            android:id="@+id/myfliper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/linearLayout1" >
+
+            <RelativeLayout
+                android:id="@+id/control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <ImageButton
+                    android:id="@+id/btnPrevious_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btnPlay_player"
+                    android:background="@null"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/desktop_prevbt" />
+
+                <ImageButton
+                    android:id="@id/btnPlay_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btnNext_player"
+                    android:background="@null"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/desktop_playbt" />
+
+                <ImageButton
+                    android:id="@id/btnNext_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/desktop_nextbt" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/choes_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/move_to_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/move2group" />
+            </LinearLayout>
+        </ViewFlipper>
+    </RelativeLayout>
+
+</RelativeLayout>
