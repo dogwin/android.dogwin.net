@@ -82,6 +82,7 @@ public class Buddha extends Activity {
         logout = mintent.getBooleanExtra("logout", false);
         if(logout){
         	SaveUC("","",false);
+        	DwClient.flag = false;
         }
 		
         /*
