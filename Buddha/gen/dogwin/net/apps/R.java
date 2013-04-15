@@ -254,6 +254,7 @@ containing a value of this type.
         public static final int loginbt=0x7f040019;
         public static final int logining=0x7f040015;
         public static final int master=0x7f040022;
+        public static final int menuLogin=0x7f040025;
         public static final int music=0x7f04001f;
         public static final int password=0x7f040017;
         public static final int quit=0x7f040024;
@@ -277,6 +278,7 @@ containing a value of this type.
     public static final class menu {
         public static final int buddha=0x7f080000;
         public static final int menu_option_main=0x7f080001;
+        public static final int menu_unlogin=0x7f080002;
     }
     public static final class string {
         public static final int EDW_Url=0x7f060004;
@@ -290,22 +292,23 @@ containing a value of this type.
         /**  menu begin 
          */
         public static final int buddha=0x7f060008;
-        public static final int keeplog=0x7f060012;
-        public static final int logerror=0x7f060017;
+        public static final int keeplog=0x7f060013;
+        public static final int logerror=0x7f060018;
         /**  <string name=""></string> 
  menu end 
  Login 
          */
-        public static final int login_title=0x7f06000f;
-        public static final int loginbt=0x7f060013;
+        public static final int login_title=0x7f060010;
+        public static final int loginbt=0x7f060014;
         public static final int loginurl=0x7f060007;
         public static final int master=0x7f06000c;
+        public static final int menuLogin=0x7f06000f;
         public static final int music=0x7f060009;
-        public static final int namenull=0x7f060015;
-        public static final int password=0x7f060011;
-        public static final int passwordnull=0x7f060016;
+        public static final int namenull=0x7f060016;
+        public static final int password=0x7f060012;
+        public static final int passwordnull=0x7f060017;
         public static final int quit=0x7f06000e;
-        public static final int registerbt=0x7f060014;
+        public static final int registerbt=0x7f060015;
         /**  layout buddha end 
          */
         public static final int serverurl=0x7f060006;
@@ -314,7 +317,7 @@ containing a value of this type.
         /**  subject 
          */
         public static final int subject=0x7f060005;
-        public static final int username=0x7f060010;
+        public static final int username=0x7f060011;
     }
     public static final class style {
         /** 

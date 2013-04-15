@@ -10,36 +10,30 @@ import java.net.URL;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
-import android.content.Context;
+
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.EditTextPreference;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
-
 import dogwin.net.apps.Buddha;
 import dogwin.net.apps.R;
-import dogwin.net.books.BooksApp;
-import dogwin.net.buddha.BuddhaApp;
 import dogwin.net.check.DownLoadManager;
 import dogwin.net.check.UpdataInfo;
 import dogwin.net.check.UpdataInfoParser;
-import dogwin.net.master.MasterApp;
-import dogwin.net.music.MusicApp;
-import dogwin.net.setting.SettingApp;
-import dogwin.net.story.StoryApp;
+import dogwin.net.publics.Menus;
 
 public class AutoUpdata extends Activity{
 	private final String TAG = this.getClass().getName();
@@ -56,6 +50,13 @@ public class AutoUpdata extends Activity{
 	int pid;
 	public boolean IconFlag=true;
 	Intent bintent;
+	
+	//check sharepreferences
+	public EditTextPreference editText;
+	public SharedPreferences preferences;
+	static String uc_username,uc_password;
+	static boolean uc_flag;
+	
 	//private FunnyLifeApplication application;
 	
 	@Override
@@ -64,68 +65,31 @@ public class AutoUpdata extends Activity{
 		setContentView(R.layout.autoupdata);
 		new Thread(new CheckVersionTask()).start();//执行检查服务器数据库版本号
 		this.pid = android.os.Process.myPid();
+		uc_flag = Rt_flag();
 	}
 	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = new MenuInflater(this);
-		inflater.inflate(R.menu.menu_option_main, menu);
+		if(DwClient.flag||uc_flag){
+			inflater.inflate(R.menu.menu_option_main, menu);
+		}else{
+			inflater.inflate(R.menu.menu_unlogin, menu);
+		}
 		return super.onCreateOptionsMenu(menu);
+		
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.liberation:
-			IconFlag = false;
-			bintent = new Intent(AutoUpdata.this,Buddha.class);  
-		    startActivity(bintent);
-		    this.finish();
-			break;
-		case R.id.buddha://诸佛菩萨
-			IconFlag = false;
-			bintent = new Intent(AutoUpdata.this,BuddhaApp.class);  
-		    startActivity(bintent);
-		    this.finish();
-			break;
-		case R.id.music://佛教音乐
-			IconFlag = false;
-			bintent = new Intent(AutoUpdata.this,MusicApp.class);  
-		    startActivity(bintent);
-		    this.finish();
-		    break;
-		case R.id.books://佛教经典
-			IconFlag = false;
-			bintent = new Intent(AutoUpdata.this,BooksApp.class);  
-		    startActivity(bintent);
-		    this.finish();
-		    break;
-		case R.id.story://佛教故事
-			IconFlag = false;
-			bintent = new Intent(AutoUpdata.this,StoryApp.class);  
-		    startActivity(bintent);
-		    this.finish();
-		    break;
-		case R.id.master://祖师大德
-			IconFlag = false;
-			bintent = new Intent(AutoUpdata.this,MasterApp.class);  
-		    startActivity(bintent);
-		    this.finish();
-		    break;
-		case R.id.setting://系统设置
-			IconFlag = false;
-			bintent = new Intent(AutoUpdata.this,SettingApp.class);  
-		    startActivity(bintent);
-		    this.finish();
-		    break;
-		case R.id.quit://退出
-			Log.v("TAG","menu");
-			android.os.Process.killProcess(pid);
-			super.finish();
+		boolean menu_flag = false;
+		IconFlag = false;
+		if(DwClient.flag||uc_flag){
+			menu_flag = true;
 		}
+		return super.onOptionsItemSelected(Menus.select_menus(item, AutoUpdata.this, pid, menu_flag));
 		
-		return super.onOptionsItemSelected(item);
 	}
 	
 	//获取当前程序版本号
@@ -298,5 +262,22 @@ public class AutoUpdata extends Activity{
 	    startActivity(intent);  
 	    //结束掉当前的activity   
 	    this.finish();  
-	}  
+	} 
+	
+	//get user current
+	public String Rt_username(){
+		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
+	    return preferences.getString("username", null);
+	}
+	
+	
+	public String Rt_password(){
+		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
+	    return preferences.getString("password", null);
+	}
+	
+	public boolean Rt_flag(){
+		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
+		return preferences.getBoolean("flag", false);
+	}
 }

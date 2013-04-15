@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/liberation"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/app_name"/>
+    <item 
+        android:id="@+id/menuLogin"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menuLogin"/>
+    <item
+        android:id="@+id/quit"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/quit"/>
+
+</menu>
