@@ -46,7 +46,7 @@ public class Buddha extends Activity {
 	Button btone;
 	IconShow iconShow;
 	int pid;
-	public boolean IconFlag=true;
+	public boolean IconFlag=true,logout=false;
 	Intent bintent;
 	String edy_url;
 	TextView edw_content;
@@ -77,6 +77,12 @@ public class Buddha extends Activity {
         mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);  
         registerReceiver(mReceiver, mFilter); 
         
+        //logout 
+        Intent mintent = getIntent();
+        logout = mintent.getBooleanExtra("logout", false);
+        if(logout){
+        	SaveUC("","",false);
+        }
 		
         /*
         btone = (Button)this.findViewById(R.id.btone);
@@ -245,7 +251,14 @@ public class Buddha extends Activity {
 	
 	
 	//get user current
-	
+	public void SaveUC(String username,String password,boolean flag) {
+	    preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
+	    SharedPreferences.Editor preferencesEditor = preferences.edit();
+	    preferencesEditor.putString("username", username);
+	    preferencesEditor.putString("password", password);
+	    preferencesEditor.putBoolean("flag", flag);
+	    preferencesEditor.commit();
+	}
 	public String Rt_username(){
 		preferences = getSharedPreferences("usercurrent", Activity.MODE_PRIVATE);
 	    return preferences.getString("username", null);
