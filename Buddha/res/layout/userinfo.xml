@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/nickname_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/profile_image"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:text="@string/nickname_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/nickname_title"
+            android:layout_alignBottom="@+id/nickname_title"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/nickname_title"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/oldps_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/changps_title"
+            android:layout_below="@+id/changps_title"
+            android:layout_marginTop="17dp"
+            android:text="@string/changps_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/oldps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/oldps_title"
+            android:layout_alignBottom="@+id/oldps_title"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/oldps_title"
+            android:ems="10" />
+
+        <EditText
+            android:id="@+id/newps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/newps_title"
+            android:layout_alignBottom="@+id/newps_title"
+            android:layout_alignLeft="@+id/oldps"
+            android:ems="10" />
+
+        <EditText
+            android:id="@+id/renewps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/renewps_title"
+            android:layout_alignBottom="@+id/renewps_title"
+            android:layout_alignLeft="@+id/newps"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/newps_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/oldps_title"
+            android:layout_below="@+id/oldps"
+            android:layout_marginTop="18dp"
+            android:text="@string/newps_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/renewps_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newps"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@+id/oldps"
+            android:text="@string/renewps_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/changps_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/profile_image"
+            android:layout_below="@+id/sex"
+            android:layout_marginTop="17dp"
+            android:text="@string/changps_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RadioGroup
+            android:id="@+id/sex"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/nickname"
+            android:layout_below="@+id/profile_image"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/sex0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:text="@string/sex_male" />
+
+            <RadioButton
+                android:id="@+id/sex1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sex_female" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/sex_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/sex"
+            android:layout_alignLeft="@+id/nickname_title"
+            android:layout_below="@+id/profile_image"
+            android:layout_centerInParent="false"
+            android:text="@string/sex_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/rtbuddha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/changebt"
+            android:layout_alignBottom="@+id/changebt"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="63dp"
+            android:text="@string/rtbuddha" />
+
+        <Button
+            android:id="@+id/changebt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/renewps"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/renewps_title"
+            android:text="@string/changebt" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+    </RelativeLayout>
+
+</LinearLayout>

@@ -40,5 +40,18 @@
     <string name="logerror">用户或密码错误！</string>
     
     <!-- profile -->
-    <string name="profile_title">我的资料</string>
+    <string name="profile_title">个性管理</string>
+    <string name="nickname_title">法名</string>
+    <string name="sex_title">性别</string>
+    <string name="sex_male">男</string>
+    <string name="sex_female">女</string>
+    <string name="changps_title">修改密码</string>
+    <string name="oldps_title">原始密码</string>
+    <string name="newps_title">新密码</string>
+    <string name="renewps_title">校验码</string>
+    <string name="changebt">修改</string>
+    <string name="rtbuddha">返回</string>
+    <string name="tab_userinfo">我的资料</string>
+    <string name="tab_lession">我的课程</string>
+    <string name="tab_friends">我的师兄</string>
 </resources>
