@@ -52,8 +52,10 @@
         <activity android:name="dogwin.net.setting.SettingApp"
             android:label="@string/setting"></activity>
         <activity android:name="dogwin.net.check.JSONParser"></activity>
-        <activity android:name="dogwin.net.check.Login"></activity>
-        <activity android:name="dogwin.net.publics.BaseActivity"></activity>
+        <activity android:name="dogwin.net.check.Login"
+            android:label="@string/login_title"></activity>
+        <activity android:name="dogwin.net.user.Profile"
+            android:label="@string/profile_title"></activity>
         <activity android:name="dogwin.net.publics.Menus"></activity>
         <!-- Tencent -->
         <!-- 

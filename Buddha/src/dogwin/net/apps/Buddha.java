@@ -37,6 +37,7 @@ import dogwin.net.check.JSONParser;
 import dogwin.net.check.LoadImages;
 import dogwin.net.check.Login;
 import dogwin.net.publics.Menus;
+import dogwin.net.user.Profile;
 
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -132,7 +133,9 @@ public class Buddha extends Activity {
 					IconFlag = false;
 					System.out.println("Buddha flag=>"+DwClient.flag);
 					//go to the profile page set
-					
+					Intent proIntent = new Intent(Buddha.this,Profile.class);
+					startActivity(proIntent);
+					Buddha.this.finish();
 				}
 			}
 		});

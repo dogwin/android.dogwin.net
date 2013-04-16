@@ -59,7 +59,8 @@ int layout autoupdata 0x7f030000
 int layout buddha 0x7f030001
 int layout buddhaapp 0x7f030002
 int layout login 0x7f030003
-int layout update 0x7f030004
+int layout profile 0x7f030004
+int layout update 0x7f030005
 int menu buddha 0x7f080000
 int menu menu_option_main 0x7f080001
 int menu menu_unlogin 0x7f080002
@@ -82,6 +83,7 @@ int string music 0x7f060009
 int string namenull 0x7f060017
 int string password 0x7f060013
 int string passwordnull 0x7f060018
+int string profile_title 0x7f06001a
 int string quit 0x7f06000f
 int string registerbt 0x7f060016
 int string serverurl 0x7f060006

@@ -38,4 +38,7 @@
     <string name="namenull">用户不能为空！</string>
     <string name="passwordnull">密码不能为空！</string>
     <string name="logerror">用户或密码错误！</string>
+    
+    <!-- profile -->
+    <string name="profile_title">我的资料</string>
 </resources>
