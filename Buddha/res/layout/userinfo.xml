@@ -6,7 +6,8 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_weight="0.69" >
 
         <TextView
             android:id="@+id/nickname_title"
@@ -32,70 +33,6 @@
         </EditText>
 
         <TextView
-            android:id="@+id/oldps_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/changps_title"
-            android:layout_below="@+id/changps_title"
-            android:layout_marginTop="17dp"
-            android:text="@string/oldps_title"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <EditText
-            android:id="@+id/oldps"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/oldps_title"
-            android:layout_alignBottom="@+id/oldps_title"
-            android:layout_marginLeft="14dp"
-            android:layout_toRightOf="@+id/oldps_title"
-            android:ems="10" 
-            android:enabled="false"
-            android:password="true"/>
-
-        <EditText
-            android:id="@+id/newps"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/newps_title"
-            android:layout_alignBottom="@+id/newps_title"
-            android:layout_alignLeft="@+id/oldps"
-            android:ems="10" 
-            android:enabled="false"
-            android:password="true"/>
-
-        <EditText
-            android:id="@+id/renewps"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/renewps_title"
-            android:layout_alignBottom="@+id/renewps_title"
-            android:layout_alignLeft="@+id/newps"
-            android:ems="10" 
-            android:enabled="false"
-            android:password="true"/>
-
-        <TextView
-            android:id="@+id/newps_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/oldps_title"
-            android:layout_below="@+id/oldps"
-            android:layout_marginTop="18dp"
-            android:text="@string/newps_title"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/renewps_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/newps"
-            android:layout_marginTop="16dp"
-            android:layout_toLeftOf="@+id/oldps"
-            android:text="@string/renewps_title"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
             android:id="@+id/changps_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -118,14 +55,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:checked="true"
-                android:text="@string/sex_male"/>
+                android:text="@string/sex_male" />
 
             <RadioButton
                 android:id="@+id/sex1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sex_female" />
-
         </RadioGroup>
 
         <TextView
@@ -139,33 +75,6 @@
             android:text="@string/sex_title"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <Button
-            android:id="@+id/rtbuddha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/changebt"
-            android:layout_alignBottom="@+id/changebt"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="63dp"
-            android:text="@string/rtbuddha" />
-
-        <Button
-            android:id="@+id/changebt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/renewps"
-            android:layout_marginTop="18dp"
-            android:layout_toRightOf="@+id/renewps_title"
-            android:text="@string/changebt" />
-
-        <CheckBox
-            android:id="@+id/changepsFlag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/sex_title"
-            android:layout_alignTop="@+id/changps_title"
-            android:text="@string/changps_title" />
-
         <ImageView
             android:id="@+id/profile_image"
             android:layout_width="wrap_content"
@@ -176,12 +85,119 @@
             android:layout_marginTop="41dp"
             android:src="@drawable/ic_launcher" />
 
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/brithday_title"
+            android:layout_alignBottom="@+id/brithday_title"
+            android:layout_alignLeft="@+id/sex"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/brithday_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/changps_title"
+            android:layout_toLeftOf="@+id/editText1"
+            android:text="@string/brithday_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#fff" >
+        android:layout_weight="0.64">
+
+        <CheckBox
+            android:id="@+id/changepsFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/changps_title" />
+
+        <EditText
+            android:id="@+id/oldps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/oldps_title"
+            android:layout_alignBottom="@+id/oldps_title"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:enabled="false"
+            android:password="true" />
+
+        <TextView
+            android:id="@+id/oldps_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/changepsFlag"
+            android:layout_marginRight="19dp"
+            android:layout_toLeftOf="@+id/oldps"
+            android:text="@string/oldps_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/renewps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/newps"
+            android:ems="10"
+            android:enabled="false"
+            android:password="true" />
+
+        <TextView
+            android:id="@+id/renewps_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/renewps"
+            android:layout_alignLeft="@+id/newps_title"
+            android:text="@string/renewps_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/newps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/oldps_title"
+            android:ems="10"
+            android:enabled="false"
+            android:password="true" />
+
+        <TextView
+            android:id="@+id/newps_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/renewps"
+            android:layout_alignLeft="@+id/oldps_title"
+            android:text="@string/newps_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/changebt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/renewps"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/oldps_title"
+            android:text="@string/changebt" />
+
+        <Button
+            android:id="@+id/rtbuddha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/changebt"
+            android:layout_alignBottom="@+id/changebt"
+            android:layout_marginLeft="26dp"
+            android:layout_toRightOf="@+id/changebt"
+            android:text="@string/rtbuddha" />
+
     </RelativeLayout>
 
 </LinearLayout>

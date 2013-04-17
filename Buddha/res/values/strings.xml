@@ -45,6 +45,7 @@
     <string name="sex_title">性别</string>
     <string name="sex_male">男</string>
     <string name="sex_female">女</string>
+    <string name="brithday_title">生日</string>
     <string name="changps_title">修改密码</string>
     <string name="oldps_title">原密码</string>
     <string name="newps_title">新密码</string>
