@@ -86,7 +86,7 @@
             android:src="@drawable/ic_launcher" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/brithday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/brithday_title"
@@ -100,8 +100,8 @@
             android:id="@+id/brithday_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sex_title"
             android:layout_alignTop="@+id/changps_title"
-            android:layout_toLeftOf="@+id/editText1"
             android:text="@string/brithday_title"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 

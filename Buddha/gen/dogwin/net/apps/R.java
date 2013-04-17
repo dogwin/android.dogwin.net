@@ -236,7 +236,8 @@ containing a value of this type.
         public static final int auto_bg=0x7f040012;
         public static final int books=0x7f040038;
         public static final int bottom=0x7f040005;
-        public static final int brithday_title=0x7f040029;
+        public static final int brithday=0x7f040029;
+        public static final int brithday_title=0x7f04002a;
         public static final int btn_add_tab=0x7f04001d;
         public static final int btn_remove_all_tabs=0x7f040020;
         public static final int btn_remove_tab=0x7f04001e;
@@ -250,7 +251,6 @@ containing a value of this type.
         public static final int changps_title=0x7f040024;
         public static final int clip_horizontal=0x7f04000f;
         public static final int clip_vertical=0x7f04000e;
-        public static final int editText1=0x7f04002a;
         public static final int edw_content=0x7f040014;
         public static final int end=0x7f040011;
         public static final int fill=0x7f04000d;

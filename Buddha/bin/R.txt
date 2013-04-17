@@ -23,7 +23,8 @@ int id alignMargins 0x7f040003
 int id auto_bg 0x7f040012
 int id books 0x7f040038
 int id bottom 0x7f040005
-int id brithday_title 0x7f040029
+int id brithday 0x7f040029
+int id brithday_title 0x7f04002a
 int id btn_add_tab 0x7f04001d
 int id btn_remove_all_tabs 0x7f040020
 int id btn_remove_tab 0x7f04001e
@@ -37,7 +38,6 @@ int id changepsFlag 0x7f04002b
 int id changps_title 0x7f040024
 int id clip_horizontal 0x7f04000f
 int id clip_vertical 0x7f04000e
-int id editText1 0x7f04002a
 int id edw_content 0x7f040014
 int id end 0x7f040011
 int id fill 0x7f04000d
