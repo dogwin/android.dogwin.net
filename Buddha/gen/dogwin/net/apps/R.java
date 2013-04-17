@@ -230,21 +230,22 @@ containing a value of this type.
     }
     public static final class id {
         public static final int EveryDayWords=0x7f040013;
-        public static final int action_settings=0x7f040031;
+        public static final int action_settings=0x7f040032;
         public static final int alignBounds=0x7f040002;
         public static final int alignMargins=0x7f040003;
         public static final int auto_bg=0x7f040012;
-        public static final int books=0x7f040035;
+        public static final int books=0x7f040036;
         public static final int bottom=0x7f040005;
         public static final int btn_add_tab=0x7f04001d;
         public static final int btn_remove_all_tabs=0x7f040020;
         public static final int btn_remove_tab=0x7f04001e;
         public static final int btn_toggle_tabs=0x7f04001f;
-        public static final int buddha=0x7f040033;
+        public static final int buddha=0x7f040034;
         public static final int center=0x7f04000c;
         public static final int center_horizontal=0x7f04000a;
         public static final int center_vertical=0x7f040008;
         public static final int changebt=0x7f040030;
+        public static final int changepsFlag=0x7f040031;
         public static final int changps_title=0x7f040025;
         public static final int clip_horizontal=0x7f04000f;
         public static final int clip_vertical=0x7f04000e;
@@ -257,13 +258,13 @@ containing a value of this type.
         public static final int horizontal=0x7f040000;
         public static final int keeplogin=0x7f040018;
         public static final int left=0x7f040006;
-        public static final int liberation=0x7f040032;
+        public static final int liberation=0x7f040033;
         public static final int loginbt=0x7f040019;
         public static final int logining=0x7f040015;
-        public static final int logout=0x7f04003a;
-        public static final int master=0x7f040037;
-        public static final int menuLogin=0x7f04003c;
-        public static final int music=0x7f040034;
+        public static final int logout=0x7f04003b;
+        public static final int master=0x7f040038;
+        public static final int menuLogin=0x7f04003d;
+        public static final int music=0x7f040035;
         public static final int newps=0x7f040027;
         public static final int newps_title=0x7f040028;
         public static final int nickname=0x7f040023;
@@ -271,21 +272,21 @@ containing a value of this type.
         public static final int oldps=0x7f040026;
         public static final int oldps_title=0x7f040024;
         public static final int password=0x7f040017;
-        public static final int profile=0x7f040038;
+        public static final int profile=0x7f040039;
         public static final int profile_image=0x7f040022;
-        public static final int quit=0x7f04003b;
+        public static final int quit=0x7f04003c;
         public static final int registerbt=0x7f04001a;
         public static final int renewps=0x7f040029;
         public static final int renewps_title=0x7f04002a;
         public static final int right=0x7f040007;
         public static final int rtbuddha=0x7f04002f;
-        public static final int setting=0x7f040039;
+        public static final int setting=0x7f04003a;
         public static final int sex=0x7f04002b;
         public static final int sex0=0x7f04002c;
         public static final int sex1=0x7f04002d;
         public static final int sex_title=0x7f04002e;
         public static final int start=0x7f040010;
-        public static final int story=0x7f040036;
+        public static final int story=0x7f040037;
         public static final int top=0x7f040004;
         public static final int tv_filler=0x7f04001b;
         public static final int username=0x7f040016;
@@ -321,6 +322,13 @@ containing a value of this type.
         public static final int buddha=0x7f060008;
         public static final int changebt=0x7f060023;
         public static final int changps_title=0x7f06001f;
+        public static final int error_newpsnull=0x7f06002b;
+        /**  profile error 
+         */
+        public static final int error_nickname=0x7f060028;
+        public static final int error_oldpsfailed=0x7f06002a;
+        public static final int error_oldpsnull=0x7f060029;
+        public static final int error_renewps=0x7f06002c;
         public static final int keeplog=0x7f060014;
         public static final int logerror=0x7f060019;
         /**  <string name=""></string> 
