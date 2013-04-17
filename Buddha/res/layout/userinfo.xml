@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:checked="true"
-                android:text="@string/sex_male" />
+                android:text="@string/sex_male"/>
 
             <RadioButton
                 android:id="@+id/sex1"
